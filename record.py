@@ -7,14 +7,14 @@ from ConfigParser import SafeConfigParser
 
 class JsonLog(object):
     def __init__(self):
-        dire = os.path.dirname('info')
-        name = os.path.basename('info')
+        dire = os.path.dirname('/opt/redispot/redis.conf')
+        name = os.path.basename('/opt/redispot/redis.conf')
         self.outfile = twisted.python.logfile.DailyLogFile(name, dire, defaultMode=0o664)
 
     def get_log(self, command, rhost, rport):
         data = {}
         parse = SafeConfigParser()
-        parse.read('info')
+        parse.read('redis.conf')
         dst_ip = parse.items('IP')
         data['timestamp'] = time.strftime("%Y-%m-%d %X", time.localtime())
         data['dst_ip'] = dst_ip[0][1]
