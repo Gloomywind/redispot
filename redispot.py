@@ -31,7 +31,7 @@ class RedisServer(Protocol):
         cmd_count += 1
         data = redis_protocol.decode(rcvdata)  # data类型:list
         command = " ".join(redis_protocol.decode(rcvdata))  # command类型:string
-        print str(command)
+        # print str(command)
         logger = JsonLog()
         logger.get_log(command, self.transport.getPeer().host, self.transport.getPeer().port)
         if data[0] in self.command:
