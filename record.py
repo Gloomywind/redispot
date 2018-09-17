@@ -15,7 +15,7 @@ class JsonLog(object):
         parse = SafeConfigParser()
         parse.read('redis.conf')
         dst_ip = parse.items('IP')
-        data['timestamp'] = time.strftime("%Y-%m-%d %X", time.localtime())
+        data['timestamp'] = datetime.datetime.fromtimestamp(time.time()).isoformat()
         data['dst_ip'] = dst_ip[0][1]
         data['dst_port'] = 6379
         data['src_ip'] = rhost
