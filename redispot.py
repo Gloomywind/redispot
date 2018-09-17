@@ -23,7 +23,7 @@ class RedisServer(Protocol):
 
     def connectionMade(self):
         self.connectionNb += 1
-        print "New connection: %s from %s".format(self.connectionNb), self.transport.getPeer().host
+        print "New connection: %s from %s" % (self.connectionNb, self.transport.getPeer().host)
 
     def dataReceived(self, rcvdata):
         cmd_count = 0
