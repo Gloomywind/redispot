@@ -89,9 +89,8 @@ class RedisCommands(object):
             elif pos == -1:
                 if len(i.strip().split()) > 1 and i.startswith(param):
                     l.append(i.strip().split())
-        print len(l)
         print l
-        red_enc_data = rediscommands.encode(l)
+        red_enc_data = RedisCommands.encode(l)
         return red_enc_data
 
     @staticmethod
@@ -108,5 +107,5 @@ class RedisCommands(object):
         someinfo = parser.items('info')
         for i in someinfo:
              s.append(":".join(i))
-        data = rediscommands.encode_new(s)
+        data = RedisCommands.encode_new(s)
         return data
