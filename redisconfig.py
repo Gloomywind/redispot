@@ -58,9 +58,9 @@ class RedisCommands(object):
     @staticmethod
     def set_config(key, value):
         flag = 0
-        with open('config/redis.conf', 'r') as f:
+        with open('config/info', 'r') as f:
             lines = f.readlines()
-        with open('config/redis.conf', 'w') as m:
+        with open('config/info', 'w') as m:
             for line in lines:
                 l = line.strip().split()
                 if l[0] == key:
