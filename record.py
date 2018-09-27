@@ -8,7 +8,7 @@ from ConfigParser import SafeConfigParser
 
 class JsonLog(object):
     def __init__(self):
-        dire = os.path.dirname('/opt/redispot/log/')
+        dire = os.path.dirname('/data/redispot/')
         self.outfile = twisted.python.logfile.DailyLogFile("redis.log", dire, defaultMode=0o664)
 
     def get_log(self, command, rhost, rport):
