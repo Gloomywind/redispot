@@ -1,0 +1,1 @@
+{"src_port": 31399, "timestamp": "2019-02-21T17:07:07.841740", "src_ip": "127.0.0.1", "command": "info", "dst_port": 6379, "dst_ip": "127.0.0.1"}

@@ -85,5 +85,5 @@ class RedisServerFactory(ServerFactory):
 
 
 log.startLogging(sys.stdout)
-reactor.listenTCP(6000, RedisServerFactory())
+reactor.listenTCP(6379, RedisServerFactory())
 reactor.run()
