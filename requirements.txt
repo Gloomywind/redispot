@@ -4,7 +4,7 @@ colorama==0.2.5
 configparser==3.5.0
 constantly==15.1.0
 fakeredis==0.8.1
-html5lib==0.999
+html5lib==0.999999999
 incremental==16.10.1
 redis==2.10.5
 redis-protocol==0.0.2
